@@ -49,6 +49,7 @@ gulp.task("js",function () {
    gulp.src(path.js + '*.js')
        // 对所有js文件进行"丑化"处理
        .pipe(uglify())
+       .pipe(rename({"suffix":".min"}))
        .pipe(gulp.dest(path.js_dist))
        .pipe(bs.stream())
 });
