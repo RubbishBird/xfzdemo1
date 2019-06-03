@@ -16,13 +16,35 @@
 // banner.greet();
 
 function Banner() {
+    this.bannerwidth = 798;
     this.bannerGroup = $("#banner-group");
     this.index = 0;
     this.leftArrow = $('.left-arrow');
     this.rightArrow = $('.right-arrow');
+    this.bannerUl = $("#banner-ul");
+    this.liList = this.bannerUl.children("li");
+    this.bannerCount = this.liList.length;
     this.listenBannerHover();
 
 }
+
+Banner.prototype.initBanner = function(){
+    var self = this;
+    this.bannerUl.css({"width":self.bannerwidth*self.bannerCount});
+};
+
+Banner.prototype.initPageControl = function(){
+    var self =this;
+    var pageControl = $(".page-control");
+    for(var i=0; i<self.bannerCount; i++){
+        var circle = $('<li></li>');
+        pageControl.append(circle);
+        if(i === 0){
+            circle.addClass("active");
+        }
+        pageControl.css({"width":self.bannerCount*12+8*2+16*(self.bannerCount-1)});
+    }
+};
 
 Banner.prototype.toggleArrow = function(isShow){
     if(isShow){
@@ -30,8 +52,8 @@ Banner.prototype.toggleArrow = function(isShow){
         this.leftArrow.show();
         this.rightArrow.show();
     }else{
-        this.leftArrow.show();
-        this.rightArrow.show();
+        this.leftArrow.hide();
+        this.rightArrow.hide();
     }
 };
 
@@ -51,10 +73,13 @@ Banner.prototype.listenBannerHover = function (){
 
 };
 
+Banner.prototype.animate = function(){
+    var self =this;
+    self.bannerUl.animate({"left":-798*self.index},500);
+};
 
 Banner.prototype.loop = function () {
     //在网页中查找所有ID=banner-ul的元素
-    var bannerUl = $("#banner-ul");
     var self = this;
     this.timer = setInterval(function () {
         //函数内如果是用this的话，代表的就是这个函数，而不是banner对象，因此需要定义var self = this;
@@ -63,12 +88,38 @@ Banner.prototype.loop = function () {
         }else{
             self.index++;
         }
-        bannerUl.animate({"left":-798*self.index},500);
+        self.animate();
     },1000);
 };
 
+Banner.prototype.listenArrowClick = function(){
+    var self = this;
+    self.leftArrow.click(function () {
+        if(self.index === 0){
+            self.index = self.bannerCount - 1;
+        }
+        else{
+            self.index--;
+        }
+        self.animate();
+    });
+
+    self.rightArrow.click(function () {
+        if(self.index === self.bannerCount -1 ){
+            self.index = 0;
+        }
+        else {
+            self.index++;
+        }
+        self.animate();
+    });
+};
+
 Banner.prototype.run = function () {
+    this.initBanner();
+    this.initPageControl();
     this.loop();
+    this.listenArrowClick();
 };
 
 

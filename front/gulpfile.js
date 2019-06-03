@@ -6,7 +6,10 @@ var concat = require("gulp-concat");
 var cache = require("gulp-cache");
 var imagemin = require("gulp-imagemin");
 var bs = require("browser-sync").create();
-var sass = require("gulp-sass")
+var sass = require("gulp-sass");
+var util = require("gulp-util");
+//gulp-util这个插件中有一个方法log,可以打印出当前的js错误信息
+var sourcemaps = require("gulp-sourcemaps")
 
 var path = {
     'html':'./templates/**/',
@@ -47,9 +50,11 @@ gulp.task("css",function () {
 gulp.task("js",function () {
     // 找到所有js文件
    gulp.src(path.js + '*.js')
+       .pipe(sourcemaps.init())
        // 对所有js文件进行"丑化"处理
-       .pipe(uglify())
+       .pipe(uglify().on('error',util.log))
        .pipe(rename({"suffix":".min"}))
+       .pipe(sourcemaps.write())
        .pipe(gulp.dest(path.js_dist))
        .pipe(bs.stream())
 });
