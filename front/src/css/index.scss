@@ -2,7 +2,7 @@
 @import "constants.scss";
 
 body{
-    background: pink;
+    background: #f2f2f2;
 }
 
 .header{
@@ -99,21 +99,19 @@ body{
   .wrapper{
     width: $pageWidth;
     margin: 0 auto;
-    height: 1000px;
-    background: #00cc99;
     overflow: hidden;
 
     .news-wrapper{
       float: left;
       width: $mainBoxWidth;
-      height: 500px;
-      background: white;
 
       .banner-group{
         width: 100%;
         height: $bannerHeight;
         background: #878787;
         position: relative;
+        overflow: hidden;
+        z-index: 0;
 
         .banner-ul{
           overflow: hidden;
@@ -184,14 +182,158 @@ body{
       }
     }
 
+
+  }
+}
+
+.main{
+  .wrapper{
+    .news-wrapper{
+      .list-outer-group{
+        background: #fff;
+        margin-top: 10px;
+
+        .list-tab{
+          width: 100%;
+          height: 66px;
+          overflow: hidden;
+          border: 1px solid #eee;
+          border-left: none;
+          border-right: none;
+
+          li{
+            float: left;
+            padding: 0 10px;
+            //line-height: 66px;
+            margin-top: 23px;
+            a{
+              color: #878787;
+            }
+
+            &:first-of-type{
+              border-left: 5px solid #5c87d9;
+            }
+            &.active{
+              a{
+                color:#212121;
+              }
+            }
+          }
+        }
+
+        .list-inner-group{
+          li{
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            overflow: hidden;
+
+            .thumbnail-group{
+              float: left;
+              height: 100px;
+              width: 120px;
+              img{
+                height: 100px;
+                width: 120px;
+              }
+            }
+
+            .news-group{
+              float: right;
+              width: 562px;
+              height: 100px;
+              position: relative;
+              .title{
+                font-size: 22px;
+                a{
+                  color: #212121;
+                  &:hover{
+                    color:$themeColor;
+                  }
+                }
+
+              }
+
+              .desc{
+                color: #878787;
+                font-size: 14px;
+                margin-top: 10px;
+              }
+
+              .more{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                font-size: 14px;
+                color: #878787;
+
+                .category{
+                  color: $themeColor;
+                }
+
+                .pub-time{
+                  margin-left: 20px;
+                  float: right;
+                }
+
+                .author{
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+
+        .load-more-group{
+          padding: 20px 0;
+          text-align: center;
+          .load-more{
+            width: 402px;
+            height: 40px;
+            background: #d2dcea;
+            color: #6d85ac;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main{
+  .wrapper{
     .siderbar-wrapper{
       width: 356px;
       float: right;
       height: 500px;
-      background: lavender;
+      background: #fff;
+
+      .title-group{
+        padding: 20px;
+        overflow: hidden;
+        .title{
+          float: left;
+          font-size: 18px;
+          color: #212121;
+        }
+        .more{
+          float: right;
+          font-size: 14px;
+          color: $themeColor;
+        }
+      }
+
+      .advertise-group{
+        img{
+          width: 100%;
+          height: 150px;
+        }
+      }
     }
-
-
   }
 }
+
+
 
