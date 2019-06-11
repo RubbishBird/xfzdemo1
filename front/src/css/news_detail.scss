@@ -6,6 +6,7 @@
 .main{
     .wrapper{
         .main-content-wrapper{
+            background: white;
             .news-wrapper{
                 padding: 20px;
 
@@ -60,6 +61,10 @@
 
 
                     }
+                }
+
+                .article{
+                    margin-top: 20px;
                 }
             }
         }
