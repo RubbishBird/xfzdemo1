@@ -1,5 +1,5 @@
-@import "constants.scss";
-@import "init.scss";
+@import "constants";
+@import "init";
 
 
 .footer{
@@ -80,7 +80,7 @@
                                 .wx-qrcode{
                                     width: 204px;
                                     height: 204px;
-                                    background: url("../images/wpic.jpg");
+                                    background: url("../../images/wpic.jpg");
                                     background-size: 100%;
                                     position: absolute;
                                     right: 360px;
