@@ -3,6 +3,7 @@
 @import "../common/header.scss";
 @import "../common/footer.scss";
 @import "../common/body.scss";
+@import "../common/news_list.scss";
 
 
 
@@ -127,66 +128,7 @@
             }
 
         .list-inner-group{
-          li{
-            border-bottom: 1px solid #eee;
-            padding: 20px;
-            overflow: hidden;
-
-            .thumbnail-group{
-              float: left;
-              height: 100px;
-              width: 120px;
-              img{
-                height: 100px;
-                width: 120px;
-              }
-            }
-
-            .news-group{
-              float: right;
-              width: 562px;
-              height: 100px;
-              position: relative;
-              .title{
-                font-size: 22px;
-                a{
-                  color: #212121;
-                  &:hover{
-                    color:$themeColor;
-                  }
-                }
-
-              }
-
-              .desc{
-                color: #878787;
-                font-size: 14px;
-                margin-top: 10px;
-              }
-
-              .more{
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                font-size: 14px;
-                color: #878787;
-
-                .category{
-                  color: $themeColor;
-                }
-
-                .pub-time{
-                  margin-left: 20px;
-                  float: right;
-                }
-
-                .author{
-                  float: right;
-                }
-              }
-            }
-          }
+          @include news_list
         }
 
         .load-more-group{

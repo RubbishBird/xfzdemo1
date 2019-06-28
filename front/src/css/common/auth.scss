@@ -1,0 +1,127 @@
+@import "constants.scss";
+@import "init.scss";
+
+body{
+    background: pink;
+}
+
+.mask-wrapper{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.3);
+    overflow-y: scroll;
+    display: none;
+
+    .auth-wrapper{
+        $authWrapperHeight: 500px;
+        $authWrapperWidth: 400px;
+        width: $authWrapperWidth;
+        height: $authWrapperHeight;
+        //background: white;
+        margin: 120px auto;
+
+        .close-wrapper{
+            width: 100%;
+            height: 40px;
+            background: #fff;
+            box-sizing: border-box;
+
+            .close-btn{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                float: right;
+                margin-top: 10px;
+                color: $assistFontColor;
+                cursor: pointer;
+            }
+        }
+
+        .auth-inner-warpper{
+            width: 100%;
+            height: $authWrapperHeight - 40px;
+            position: relative;
+            overflow: hidden;
+
+            .scroll-wrapper{
+                width: $authWrapperWidth*2;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                //background: #c9c9c9;
+                //background: #ffffff;
+
+
+
+                .auth-group{
+                    width: $authWrapperWidth;
+                    //height: 100%;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    .top-group{
+                        overflow: hidden;
+                        width: 100%;
+                        height: 36px;
+                        border-bottom: 1px solid $lineColor;
+                        line-height: 32px;
+                        .title{
+                            float: left;
+                            color: $mainFontColor;
+                            border-bottom: 3px solid $themeColor;
+                        }
+                        .switch{
+                            float: right;
+                            color: $themeColor;
+
+                        }
+                    }
+
+                    .form-group{
+                        margin-top: 20px;
+                        .input-group{
+                            margin-bottom: 20px;
+                            .form-control{
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                width: 100%;
+                                box-sizing: border-box;
+                                height: 40px;
+                                outline: none;
+                            }
+                            .remember-label{
+                                font-size: 14px;
+                            }
+
+                            .submit-btn{
+                                width: 100%;
+                                height: 40px;
+                                background-color:$themeColor ;
+                                border: none;
+                                color: white;
+                                cursor: pointer;
+                            }
+                        }
+
+                    }
+                }
+
+                .signin-group{
+                    float: left;
+                    background: #fff;
+                }
+                .signup-group{
+                    float: left;
+                    background: #fff;
+                }
+            }
+        }
+
+    }
+
+
+
+}

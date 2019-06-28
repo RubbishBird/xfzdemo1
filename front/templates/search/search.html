@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo</title>
-    <link rel="stylesheet" href="../../dist/css/news/index.min.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1201120_hwbd6ixe9pu.css">
-    <script src="../../dist/js/jquery-3.3.1.min.js"></script>
-    <script src="../../dist/js/index.min.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="../../dist/css/search/search.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
+
             <div class="logo">
                 <a href="/"></a>
             </div>
+
             <div class="PC-nav">
                 <ul>
                     <li class="active"><a href="/">创业课堂</a></li>
@@ -29,73 +28,49 @@
                 <a href="#">注册</a>
             </div>
 
-
         </div>
-
     </header>
     <div class="main">
         <div class="wrapper">
             <div class="main-content-wrapper">
-                <div class="banner-group" id="banner-group">
-                    <ul class="banner-ul" id="banner-ul">
-                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="https://static-image.xfz.cn/1523504442_455.png" alt=""></a></li>
-                        <li><a href="#"><img src="https://static-image.xfz.cn/1521444982_469.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="https://static-image.xfz.cn/1522742329_629.png" alt=""></a></li>
-                    </ul>
-                    <span class="arrow left-arrow">‹</span>
-                    <span class="arrow right-arrow">›</span>
-                    <div class="page-control-group">
-                        <ul class="page-control">
-                        </ul>
-                    </div>
-
+                <div class="search-group">
+                    <form action="" method="get">
+                        <input type="text" class="search_input" placeholder="请输入关键字">
+                        <input type="submit" class="search-btn" value="搜索">
+                    </form>
                 </div>
-                <div class="list-outer-group">
-                    <ul class="list-tab">
-                        <li class="active"><a href="#">最新资讯</a></li>
-                        <li><a href="#">热点新闻</a></li>
-                        <li><a href="#">深度报道</a></li>
-                        <li><a href="#">干货分享</a></li>
-                        <li><a href="#">投资人说</a></li>
-                    </ul>
-                    <ul class="list-inner-group">
+                <div class="recommend-group">
+                    <p class="recommend-title">热门推荐</p>
+                    <ul class="recommend-list">
                         <li>
-                            <div class="thumbnail-group">
-                                <a href=""><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1451959634,1975369232&fm=15&gp=0.jpg" alt=""></a>
-                            </div>
-                            <div class="news-group">
-                                <p class="title"><a href="#">深度剖析美国贸易战对中国大陆带来的消极影响</a></p>
-                                <p class="desc">这是描述信息</p>
-                                <p class="more">
-                                    <span class="category">深度报道</span>
-                                    <span class="pub-time">1小时前</span>
-                                    <span class="author">F</span>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="list-inner-group">
+                                <div class="thumbnail-group">
+                                    <a href=""><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1451959634,1975369232&fm=15&gp=0.jpg" alt=""></a>
+                                </div>
+                                <div class="news-group">
+                                    <p class="title"><a href="#">深度剖析美国贸易战对中国大陆带来的消极影响</a></p>
+                                    <p class="desc">这是描述信息</p>
+                                    <p class="more">
+                                        <span class="category">深度报道</span>
+                                        <span class="pub-time">1小时前</span>
+                                        <span class="author">F</span>
+                                    </p>
+                                </div>
+                            </li>
                         <li>
-                            <div class="thumbnail-group">
-                                <a href=""><img src="../../src/images/gushi.jpg" alt=""></a>
-                            </div>
-                            <div class="news-group">
-                                <p class="title"><a href="#">畅游股市，三个月引你走向人生巅峰</a></p>
-                                <p class="desc">这是描述信息</p>
-                                <p class="more">
-                                    <span class="category">深度报道</span>
-                                    <span class="pub-time">1小时前</span>
-                                    <span class="author">F</span>
-                                </p>
-                            </div>
-                        </li>
+                                <div class="thumbnail-group">
+                                    <a href=""><img src="../../src/images/gushi.jpg" alt=""></a>
+                                </div>
+                                <div class="news-group">
+                                    <p class="title"><a href="#">畅游股市，三个月引你走向人生巅峰</a></p>
+                                    <p class="desc">这是描述信息</p>
+                                    <p class="more">
+                                        <span class="category">深度报道</span>
+                                        <span class="pub-time">1小时前</span>
+                                        <span class="author">F</span>
+                                    </p>
+                                </div>
+                            </li>
                     </ul>
-                    <div class="load-more-group">
-                        <button class="load-more">
-                            查看更多
-                        </button>
-                    </div>
                 </div>
             </div>
             <div class="siderbar-wrapper">
@@ -145,8 +120,8 @@
 
             </div>
         </div>
+
     </div>
-    
     <footer class="footer">
         <div class="top-group">
             <div class="top-inner-group">
@@ -181,5 +156,6 @@
         </div>
         <div class="bottom-group">@2019 南京股份有限公司京ICP备</div>
     </footer>
+
 </body>
 </html>
