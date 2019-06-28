@@ -14,14 +14,14 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6 (wf_p3env)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (DJ_env)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../xfzdemo\templates" />
+        <option value="$MODULE_DIR$/front/templates" />
       </list>
     </option>
   </component>
