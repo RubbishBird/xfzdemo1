@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path,include
 
 urlpatterns = [
-    path('cms/', include('apps.news.urls')),
-    path('',include('apps.cms.urls'))
+    path('', include('apps.news.urls')),
+    path('cms/',include('apps.cms.urls'))
 ]
