@@ -90,4 +90,5 @@ gulp.task('bs',function () {
 
 // 创建一个默认的任务，即创建bs服务器并且监听文件的修改
 // 先执行bs任务，再执行watch任务
-gulp.task('default',['bs','watch']);
+// gulp.task('default',['bs','watch']);
+gulp.task('default',['watch']);
