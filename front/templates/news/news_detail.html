@@ -1,35 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../../dist/css/news/news_detail.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
 
-            <div class="logo">
-                <a href="/"></a>
-            </div>
 
-            <div class="PC-nav">
-                <ul>
-                    <li class="active"><a href="/">创业课堂</a></li>
-                    <li><a href="#">创业资讯</a></li>
-                    <li><a href="#">企业服务</a></li>
-                    <li><a href="#">搜索</a></li>
-                </ul>
-            </div>
+{% extends 'base/front_base.html' %}
 
-            <div class="auth-box">
-                <i class="icon-wo iconfont"></i>
-                <a href="#">登录</a> /
-                <a href="#">注册</a>
-            </div>
+{% block title %}
+    详情页
+{% endblock %}
 
-        </div>
-    </header>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/news/news_detail.min.css' %}">
+{% endblock %}
+
+{% block body %}
     <div class="main">
         <div class="wrapper">
             <div class="main-content-wrapper">
@@ -101,88 +82,7 @@
                 </div>
 
             </div>
-            <div class="siderbar-wrapper">
-                <div class="title-group">
-                    <span class="title">在线课堂</span>
-                    <a class="more" href="#">更多</a>
-                </div>
-                <div class="advertise-group">
-                    <a href="#"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559750179783&di=592a273d02a32ba54ea60fa6ff357f09&imgtype=0&src=http%3A%2F%2Fi1.bbs.fd.zol-img.com.cn%2Ft_s800x5000%2Fg5%2FM00%2F01%2F02%2FChMkJlbKaFSICy3JAAAqfwlo2E0AALDZwOufmQAACqX417.gif" alt=""></a>
-                </div>
-                <div class="platform-group">
-                    <div class="title-group">
-                        <span class="title">关注XFZ</span>
-                    </div>
-                    <div class="focus-group">
-                        <ul class="left-group">
-                            <li class="zhihu"><a href="#" target="_blank">小饭桌创业课堂</a></li>
-                            <li class="weibo"><a href="#" target="_blank">小饭桌创业课堂</a></li>
-                            <li class="toutiao"><a href="#" target="_blank">小饭桌</a></li>
-                        </ul>
-                        <div class="right-group">
-                            <p class="desc">扫码关注</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="hot-news-group">
-                    <div class="title-group">
-                        <soan class="title">热门推荐</soan>
-                    </div>
-                    <ul class="hot-list-group">
-                        <li>
-                            <div class="left-group">
-                                <p class="title"><a href="#">畅游欧美大陆，感受非常乐趣</a></p>
-                                <p class="more">
-                                    <span class="category">深度报道</span>
-                                    <span class="pub-time">两小时前</span>
-                                </p>
-                            </div>
-                            <div class="right-group">
-                                <a href="#"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=
-                                1559750145805&di=76aff46c29ca3c5539beb08cf82c3288&imgtype=0&src=http%3A%2F%2Fimg.pcauto.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fauto5%2F1708%2F25%2Fc72%2F56655025_5f90a9c7jw1dgdrvbd6ijg.gif" alt=""></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            {% include 'common/sidebar.html' %}
         </div>
     </div>
-    <footer class="footer">
-        <div class="top-group">
-            <div class="top-inner-group">
-                <div class="log-box"></div>
-                <div class="detail-group">
-                    <div class="line1">
-                        <ul class="links">
-                            <li><a href="#">关于小饭桌</a></li>
-                            <li><a href="#">创业课堂</a></li>
-                            <li><a href="#">寻求报道</a></li>
-                            <li><a href="#">创业礼包</a></li>
-                        </ul>
-                        <div class="about-us">
-                            <span class="title">关于我们:  </span>
-                            <ul class="social-group">
-                                <li class="weixin">
-                                    <div class="wx-qrcode"></div>
-                                    <span class="text">0808</span>
-                                </li>
-                                <li class="weibo">
-                                    <a href="#" class="text">小饭桌创业课堂</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="line2">
-                        <p class="address">江苏省南京市鼓楼区紫峰大厦38L2001室</p>
-                        <p class="contact">400-810-1090(仅限工作日)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-group">@2019 南京股份有限公司京ICP备</div>
-    </footer>
-</body>
-
-</html>
+{% endblock %}
