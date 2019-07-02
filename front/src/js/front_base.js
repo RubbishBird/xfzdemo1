@@ -1,5 +1,27 @@
 
+//操作导航条的
+function FrontBase() {
 
+}
+
+FrontBase.prototype.run = function(){
+    var self = this;
+    self.listenAuthBoxHover();
+};
+
+FrontBase.prototype.listenAuthBoxHover = function () {
+    var authBox = $('.auth-box');
+    var userMoreBox = $('.user-more-box');
+    authBox.hover(function () {
+        userMoreBox.show();
+    },function () {
+        userMoreBox.hide();
+    });
+
+};
+
+
+//操作登录注册的
 function Auth() {
     var self = this;
     self.maskWrapper = $('.mask-wrapper');
@@ -109,3 +131,9 @@ $(function () {
    var auth = new Auth();
    auth.run();
 });
+
+
+$(function () {
+    var frontBase = new FrontBase();
+    frontBase.run();
+})
