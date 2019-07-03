@@ -33,6 +33,7 @@ Auth.prototype.run = function(){
     self.ListenShowHideEvent();
     self.listenSwitchEvent();
     self.listenSigninEvent();
+    self.listenImgCaptchaEvent();
 };
 
 Auth.prototype.showEvent = function(){
@@ -75,6 +76,13 @@ Auth.prototype.listenSwitchEvent = function(){
         }else {
             self.scrollWrapper.animate({"left":"-400px"})
         }
+    });
+};
+
+Auth.prototype.listenImgCaptchaEvent = function(){
+    var ImageCaptcha = $('.img_captcha');
+    ImageCaptcha.click(function () {
+        ImageCaptcha.attr('src','account/img_captcha'+'?random='+Math.random())
     });
 };
 

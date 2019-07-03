@@ -49,7 +49,7 @@ def img_captcha(request):
     #将BytesIO的文件指针移动到最开始的位置
     out.seek(0)
 
-    response = HttpResponse(Content_type = 'image/png')
+    response = HttpResponse(content_type = 'image/png')
     #从BytesIO的管道中，读取图片数据，保存到response对象上
     response.write(out.read())
     response['Content_length'] = out.tell()
