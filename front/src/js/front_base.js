@@ -86,6 +86,43 @@ Auth.prototype.listenImgCaptchaEvent = function(){
     });
 };
 
+Auth.prototype.listenSmsCaptchaEvent = function(){
+    var smsCaptcha = $('.sms-captcha-btn');
+    var telephoneInput = $(".signup-group input[name = 'sms-captcha']");
+    smsCaptcha.click(function () {
+       var telephone = telephoneInput.val();
+       if(!telephone){
+           window.messageBox.showInfo('请输入手机号码！');
+       }
+       xfzajax.get({
+           'url':'/account/sms_captcha',
+           'data':{
+               'telephone':telephone
+           },
+           'success':function (result) {
+               if(result['code']==200){
+                   messageBox.showSuccess('短信验证码发送成功！')
+                    smsCaptcha.addClass('disabled');
+                   var count = 60;
+                   var timer = setInterval(function () {
+                       smsCaptcha.text(count+'s');
+                       count-= 1;
+                       if(count<=0){
+                           clearInterval(timer);
+                           smsCaptcha.removeClass('disabled');
+                           smsCaptcha.text('发送验证码');
+                       }
+                   },1000);
+               }
+           },
+           'fail':function (error) {
+               console.log(error)
+           }
+       })
+    });
+};
+
+
 Auth.prototype.listenSigninEvent = function(){
     var self = this;
     var signinGroup = $('.signin-group');

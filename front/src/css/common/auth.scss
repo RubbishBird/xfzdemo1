@@ -123,6 +123,10 @@ body{
                                     line-height: 40px;
                                     cursor: pointer;
                                 }
+                                .disabled{
+                                    color: #cccccc;
+                                    border-color: #ccc;
+                                }
                             }
 
                             .submit-btn{

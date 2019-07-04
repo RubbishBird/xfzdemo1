@@ -9,6 +9,8 @@ from django.shortcuts import redirect,reverse
 from io import BytesIO
 from django.http import HttpResponse
 from utils.captcha.xfzcaptcha import Captcha
+from utils import messageSender
+from django.core.cache import cache
 
 
 @require_POST
@@ -40,6 +42,7 @@ def logout_view(request):
     return redirect(reverse('index'))
 
 
+#生成验证码
 def img_captcha(request):
     text,image = Captcha.gene_code()
     #BytesIO相当于一个管道，用来存储图片的流数据
@@ -53,5 +56,18 @@ def img_captcha(request):
     #从BytesIO的管道中，读取图片数据，保存到response对象上
     response.write(out.read())
     response['Content_length'] = out.tell()
-
+    cache.set(text, text, 5 * 60)
     return response
+
+#生成短信验证码
+def sms_captcha(request):
+    telephone = request.GET.get('telephone')
+    code = Captcha.gene_text()
+    cache.set(telephone,code,1*60)
+    result = messageSender.send(telephone,code)
+    if result:
+        return restful.ok()
+    else:
+        return restful.params_error(message="短信验证码发送失败")
+
+

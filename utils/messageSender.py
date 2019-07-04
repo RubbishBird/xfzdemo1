@@ -1,7 +1,7 @@
 #-*-coding:utf-8-*-
 import requests
 
-def messageSender(mobile,messageCode):
+def send(mobile,messageCode):
     url = "http://v.juhe.cn/sms/send"
     params = {
         "mobile": mobile,
