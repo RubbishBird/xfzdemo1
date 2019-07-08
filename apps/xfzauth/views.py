@@ -56,7 +56,7 @@ def img_captcha(request):
     #从BytesIO的管道中，读取图片数据，保存到response对象上
     response.write(out.read())
     response['Content_length'] = out.tell()
-    cache.set(text, text, 5 * 60)
+    cache.set(text.lower(), text.lower(), 5 * 60)
     return response
 
 #生成短信验证码

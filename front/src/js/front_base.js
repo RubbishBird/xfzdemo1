@@ -26,6 +26,7 @@ function Auth() {
     var self = this;
     self.maskWrapper = $('.mask-wrapper');
     self.scrollWrapper = $(".scroll-wrapper");
+    self.smsCaptcha = $('.sms-captcha-btn');
 }
 
 Auth.prototype.run = function(){
@@ -34,6 +35,7 @@ Auth.prototype.run = function(){
     self.listenSwitchEvent();
     self.listenSigninEvent();
     self.listenImgCaptchaEvent();
+    self.listenSmsCaptchaEvent();
 };
 
 Auth.prototype.showEvent = function(){
@@ -44,6 +46,25 @@ Auth.prototype.showEvent = function(){
 Auth.prototype.hideEvent = function(){
     var self = this;
     self.maskWrapper.hide();
+};
+
+Auth.prototype.smsSuccessEvent = function(){
+    var self = this;
+    messageBox.showSuccess('短信验证码发送成功！')
+        self.smsCaptcha.addClass('disabled');
+        var count = 60;
+        self.smsCaptcha.unbind('click');
+        var timer = setInterval(function () {
+           self.smsCaptcha.text(count+'s');
+           count-= 1;
+           if(count<=0){
+               clearInterval(timer);
+               self.smsCaptcha.removeClass('disabled');
+               self.smsCaptcha.text('发送验证码');
+               self.listenSmsCaptchaEvent();
+           }
+        },1000);
+
 };
 
 Auth.prototype.ListenShowHideEvent = function(){
@@ -87,9 +108,9 @@ Auth.prototype.listenImgCaptchaEvent = function(){
 };
 
 Auth.prototype.listenSmsCaptchaEvent = function(){
-    var smsCaptcha = $('.sms-captcha-btn');
-    var telephoneInput = $(".signup-group input[name = 'sms-captcha']");
-    smsCaptcha.click(function () {
+    var self = this;
+    var telephoneInput = $(".signup-group input[name = 'telephone']");
+    self.smsCaptcha.click(function () {
        var telephone = telephoneInput.val();
        if(!telephone){
            window.messageBox.showInfo('请输入手机号码！');
@@ -101,18 +122,7 @@ Auth.prototype.listenSmsCaptchaEvent = function(){
            },
            'success':function (result) {
                if(result['code']==200){
-                   messageBox.showSuccess('短信验证码发送成功！')
-                    smsCaptcha.addClass('disabled');
-                   var count = 60;
-                   var timer = setInterval(function () {
-                       smsCaptcha.text(count+'s');
-                       count-= 1;
-                       if(count<=0){
-                           clearInterval(timer);
-                           smsCaptcha.removeClass('disabled');
-                           smsCaptcha.text('发送验证码');
-                       }
-                   },1000);
+                   self.smsSuccessEvent();
                }
            },
            'fail':function (error) {
