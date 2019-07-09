@@ -2,7 +2,7 @@
 
 from django.contrib.auth import login,logout,authenticate
 from django.views.decorators.http import require_POST
-from .forms import LoginForm
+from .forms import LoginForm,Register
 from django.http import JsonResponse
 from utils import restful
 from django.shortcuts import redirect,reverse
@@ -11,7 +11,8 @@ from django.http import HttpResponse
 from utils.captcha.xfzcaptcha import Captcha
 from utils import messageSender
 from django.core.cache import cache
-
+from .models import User
+# from django.contrib.auth import get_user_model
 
 @require_POST
 def login_view(request):
@@ -40,6 +41,19 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect(reverse('index'))
+
+@require_POST
+def register(request):
+    form = Register(request.POST)
+    if form.is_valid():
+        telephone = form.cleaned_data.get("telephone")
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password1')
+        user = User.objects.create_user(telephone=telephone,username=username,password=password)
+        login(request,user)
+        return restful.ok()
+    else:
+        return restful.params_error(message=form.get_errors())
 
 
 #生成验证码
