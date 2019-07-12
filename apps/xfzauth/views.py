@@ -59,7 +59,6 @@ def register(request):
 #生成验证码
 def img_captcha(request):
     text,image = Captcha.gene_code()
-    print('我是缓存中的验证码：' + text)
     #BytesIO相当于一个管道，用来存储图片的流数据
     out = BytesIO()
     #调用image的save方法，将image对象保存到BytesIO中
@@ -72,14 +71,15 @@ def img_captcha(request):
     response.write(out.read())
     response['Content_length'] = out.tell()
     cache.set(text, text, 5 * 60)
-
     return response
 
 #生成短信验证码
 def sms_captcha(request):
     telephone = request.GET.get('telephone')
     code = Captcha.gene_text()
-    cache.set(telephone,code,1*60)
+    cache.set(telephone,code,5*60)
+    cachecode = str(cache.get(code))
+    print("cachecode:" + cachecode)
     print('短信验证码：' + code)
     # result = messageSender.send(telephone,code)
     # if result:

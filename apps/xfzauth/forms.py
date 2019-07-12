@@ -24,27 +24,31 @@ class RegisterForm(forms.Form,FormMixin):
         cleaned_data = super(RegisterForm, self).clean()
         password1 = cleaned_data.get('password1')
         password2 = cleaned_data.get('password2')
-
+    #
         # 验证两次输入密码是否一致
         if password1 != password2:
             raise forms.ValidationError("两次输入密码不一致!")
-
+    #
         # 验证图片验证码
-        img_captcha = cleaned_data.get("img_captcha")
-        cached_img_captcha = cache.get(img_captcha)
-        if not cached_img_captcha or cached_img_captcha != img_captcha:
+        img_captcha1 = cleaned_data.get("img_captcha")
+        img_captcha = str(img_captcha1)
+        cached_img_captcha1 = cache.get(img_captcha.lower())
+        cached_img_captcha = str(cached_img_captcha1)
+        if not cached_img_captcha or cached_img_captcha.lower() != img_captcha.lower():
             raise forms.ValidationError("图片验证码错误！")
-
+    #
         telephone = cleaned_data.get('telephone')
-        sms_captcha = cleaned_data.get('sms_captcha')
-        cached_sms_captcha = cache.get(telephone)
-        if not cached_sms_captcha or cached_sms_captcha != sms_captcha:
+        sms_captcha1 = cleaned_data.get('sms_captcha')
+        sms_captcha = str(sms_captcha1)
+        cached_sms_captcha1 = cache.get(telephone)
+        cached_sms_captcha = str(cached_sms_captcha1)
+        if not cached_sms_captcha or cached_sms_captcha.lower() != sms_captcha.lower():
             raise forms.ValidationError("手机验证码错误！")
-
+    #
         exists = User.objects.filter(telephone=telephone).exists()
         if exists:
             forms.ValidationError("该手机号码已注册！")
-
+    #
         return cleaned_data
 
 

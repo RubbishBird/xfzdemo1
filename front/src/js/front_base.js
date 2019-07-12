@@ -227,9 +227,9 @@ Auth.prototype.listenSignupEvent = function(){
                 }
             }
         },
-            'fail':function (error) {
-                console.log(error)
-            }
+        'fail':function (error) {
+            console.log(error)
+        }
     });
     });
 
