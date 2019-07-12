@@ -56,52 +56,52 @@ Auth.prototype.listenSwitchEvent = function(){
     });
 };
 
-Auth.prototype.listenSigninEvent = function(){
-    var self = this;
-    var signinGroup = $('.signin-group');
-    var telephoneInput = signinGroup.find("input[name='telephone']");
-    var passwordInput = signinGroup.find("input[name='password']");
-    var rememberInput = signinGroup.find("input[name='remember']");
-
-    var submitBtn = signinGroup.find('.submit-btn');
-    submitBtn.click(function (event) {
-        event.preventDefault();
-        var telephone = telephoneInput.val();
-        var password = passwordInput.val();
-        var remember = rememberInput.prop('checked');
-
-        xfzajax.post({
-            'url':'/account/login/',
-            'data':{
-                'telephone':telephone,
-                'password':password,
-                'remember':remember?1:0
-            },
-            'success':function (result) {
-                if(result['code'] == 200){
-                    self.hideEvent();
-                    window.location.reload();
-                }else{
-                    var messagecode = result['message'];
-                    if(typeof messagecode == 'string' || messagecode.constructor == String){
-                        window.messageBox.show(messagecode);
-                    }else{
-                        for(var key in messagecode){
-                            var messages = messagecode[key];
-                            var message = messages[0];
-                            window.messageBox.show(message);
-                        }
-                    }
-                }
-
-            },
-            'fail':function (error) {
-                console.log(error);
-
-            }
-        });
-    });
-};
+// Auth.prototype.listenSigninEvent = function(){
+//     var self = this;
+//     var signinGroup = $('.signin-group');
+//     var telephoneInput = signinGroup.find("input[name='telephone']");
+//     var passwordInput = signinGroup.find("input[name='password']");
+//     var rememberInput = signinGroup.find("input[name='remember']");
+//
+//     var submitBtn = signinGroup.find('.submit-btn');
+//     submitBtn.click(function (event) {
+//         event.preventDefault();
+//         var telephone = telephoneInput.val();
+//         var password = passwordInput.val();
+//         var remember = rememberInput.prop('checked');
+//
+//         xfzajax.post({
+//             'url':'/account/login/',
+//             'data':{
+//                 'telephone':telephone,
+//                 'password':password,
+//                 'remember':remember?1:0
+//             },
+//             'success':function (result) {
+//                 if(result['code'] == 200){
+//                     self.hideEvent();
+//                     window.location.reload();
+//                 }else{
+//                     var messagecode = result['message'];
+//                     if(typeof messagecode == 'string' || messagecode.constructor == String){
+//                         window.messageBox.show(messagecode);
+//                     }else{
+//                         for(var key in messagecode){
+//                             var messages = messagecode[key];
+//                             var message = messages[0];
+//                             window.messageBox.show(message);
+//                         }
+//                     }
+//                 }
+//
+//             },
+//             'fail':function (error) {
+//                 console.log(error);
+//
+//             }
+//         });
+//     });
+// };
 
 
 

@@ -36,6 +36,7 @@ Auth.prototype.run = function(){
     self.listenSigninEvent();
     self.listenImgCaptchaEvent();
     self.listenSmsCaptchaEvent();
+    self.listenSignupEvent();
 };
 
 Auth.prototype.showEvent = function(){
@@ -155,9 +156,27 @@ Auth.prototype.listenSigninEvent = function(){
                 'remember':remember?1:0
             },
             'success':function (result) {
+                if(result['code'] == 200){
                     self.hideEvent();
                     window.location.reload();
+                }else{
+                    var messagecode = result['message'];
+                    if(typeof messagecode == 'string' || messagecode.constructor == String){
+                        window.messageBox.show(messagecode);
+                    }else{
+                        for(var key in messagecode){
+                            var messages = messagecode[key];
+                            var message = messages[0];
+                            window.messageBox.show(message);
+                        }
+                    }
+                }
+
             },
+            'fail':function (error) {
+                console.log(error);
+
+            }
         });
     });
 };
@@ -165,23 +184,24 @@ Auth.prototype.listenSigninEvent = function(){
 Auth.prototype.listenSignupEvent = function(){
     var signupGroup = $('.signup-group');
     var submitBtn = signupGroup.find('.submit-btn');
+    submitBtn.click(function (event) {
+        event.preventDefault();
+        var telephoneInput = signupGroup.find("input[name='telephone']");
+        var usernameInput = signupGroup.find("input[name='username']");
+        var imgCaptchaInput = signupGroup.find("input[name='img-captcha']");
+        var password1Input = signupGroup.find("input[name='password1']");
+        var password2Input = signupGroup.find("input[name='password2']");
+        var smscaptchaInput = signupGroup.find("input[name='sms-captcha']");
 
-    var telephoneInput = signupGroup.find("input[name='telephone']");
-    var usernameInput = signupGroup.find("input[name='username']");
-    var imgCaptchaInput = signupGroup.find("input[name='img-captcha']");
-    var password1Input = signupGroup.find("input[name='password1']");
-    var password2Input = signupGroup.find("input[name='password2']");
-    var smscaptchaInput = signupGroup.find("input[name='sms-captcha']");
+        var telephone = telephoneInput.val();
+        var username = usernameInput.val();
+        var imgCaptcha = imgCaptchaInput.val();
+        var password1 = password1Input.val();
+        var password2 = password2Input.val();
+        var smscaptcha = smscaptchaInput.val();
 
-    var telephone = telephoneInput.val();
-    var username = usernameInput.val();
-    var imgCaptcha = imgCaptchaInput.val();
-    var password1 = password1Input.val();
-    var password2 = password2Input.val();
-    var smscaptcha = smscaptchaInput.val();
-
-    xfzajax.post({
-        'url':'/account/register',
+        xfzajax.post({
+        'url':'/account/register/',
         'data':{
             'telephone':telephone,
             'username':username,
@@ -191,9 +211,29 @@ Auth.prototype.listenSignupEvent = function(){
             'smscaptcha':smscaptcha,
         },
         'success':function (result) {
-                window.location.reload()
+            if(result['code'] === 200){
+                // window.location.reload();
+            }else{
+                var messageObject = result['message'];
+                if(typeof messageObject == 'string' || messageObject.constructor == String){
+                    window.messageBox.showError(messageObject);
+                }else{
+                    // {"password":['密码最大长度不能超过20为！','xxx'],"telephone":['xx','x']}
+                    for(var key in messageObject){
+                        var messages = messageObject[key];
+                        var message = messages[0];
+                        window.messageBox.showError(message);
+                    }
+                }
+            }
         },
+            'fail':function (error) {
+                console.log(error)
+            }
     });
+    });
+
+
 };
 
 
