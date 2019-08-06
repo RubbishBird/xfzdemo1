@@ -17,7 +17,7 @@
         height: $navHeight;
         //background: blue;
         margin: 0 auto;
-        overflow: hidden;
+        //overflow: hidden;
 
         .logo{
           width: 127px;
@@ -63,51 +63,53 @@
         }
 
         .auth-box{
-        line-height: $navHeight;
-        float: right;
-        color: black;
-        height: $navHeight;
+            line-height: $navHeight;
+            float: right;
+            color: black;
+            height: $navHeight;
+            position: relative;
 
-        .iconfont{
-        color: black;
-        font-size: 20px;
-        }
-        .user-more-box{
-            background: #c9c9c9;
-            width: 140px;
-            height: 90px;
-            position: absolute;
-            box-shadow: 0 3px 4px #ccc;
-            border-radius: 5px;
-            top: 65px;
-            right: 320px;
-            font-size: 14px;
-            z-index: 2;
-            display: none;
+            .iconfont{
+            color: black;
+            font-size: 20px;
+            }
+            .user-more-box{
+                background: #c9c9c9;
+                width: 140px;
+                //height: 90px;
+                position: absolute;
+                box-shadow: 0 3px 4px #ccc;
+                border-radius: 5px;
+                top: 65px;
+                left: 50%;
+                margin-left: -70px;
+                font-size: 14px;
+                z-index: 2;
+                display: none;
 
-          .triangle{
+              .triangle{
 
-            border: solid transparent;
-            border-width: 10px;
-            border-bottom-color: #c9c9c9;
-            display: block;
-            width: 0;
-            height: 0;
-            margin-top: -20px;
-            margin-left: 60px;
-          }
-          a{
-              text-align: center;
-              height: 44px;
-              color: #6d85ac85!important;
-              display: block;
-              line-height: 44px;
-          }
-        }
+                border: solid transparent;
+                border-width: 10px;
+                border-bottom-color: #c9c9c9;
+                display: block;
+                width: 0;
+                height: 0;
+                margin-top: -20px;
+                margin-left: 60px;
+              }
+              a{
+                  text-align: center;
+                  height: 44px;
+                  color: #6d85ac85!important;
+                  display: block;
+                  line-height: 44px;
+              }
+            }
 
-        a{
-        color: black;
-        }
+            a{
+            color: black;
+            }
         }
 
     }
