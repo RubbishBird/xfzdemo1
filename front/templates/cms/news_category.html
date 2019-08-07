@@ -29,14 +29,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>热点</td>
+                        {% for category in categories %}
+                            <tr data-pk="{{ category.pk }}" data-name="{{ category.name }}">
+                                <td>{{ category.name }}</td>
                                 <td>20</td>
                                 <td>
-                                    <button class="btn btn-warning btn-xs">编辑</button>
-                                    <button class="btn btn-danger btn-xs">删除</button>
+                                    <button class="btn btn-warning btn-xs eidt-btn">编辑</button>
+                                    <button class="btn btn-danger btn-xs del-btn">删除</button>
                                 </td>
                             </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>

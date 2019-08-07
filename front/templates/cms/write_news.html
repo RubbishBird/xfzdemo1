@@ -2,6 +2,9 @@
 
 {% block title %}发布新闻{% endblock %}
 
+{% block head %}
+    <script src="{% static 'js/write_news.min.js' %}"></script>
+{% endblock %}
 
 {% block content-header %}
 <h1>发布新闻</h1>
@@ -20,9 +23,9 @@
                         <div class="form-group">
                             <label for="category-form">分类</label>
                             <select name="category" id="category-form" class="form-control">
-                                <option value="1">创业案例</option>
-                                <option value="2">热点</option>
-                                <option value="3">风投</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.pk }}">{{ category.name }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                         <div class="form-group">
@@ -34,7 +37,8 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" name="thunbnail" id="thunbnail-form">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default">上传图片</button>
+                                    <label class="btn btn-default btn-file">上传图片
+                                    <input hidden type="file" class="btn btn-default" id="thunbnail-btn"></label>
                                 </span>
                             </div>
                         </div>
