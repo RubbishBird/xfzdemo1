@@ -7,6 +7,7 @@ from apps.news.models import NewsCategory
 from apps.cms.forms import EditNewsCategoryForm
 import os
 from django.conf import settings
+import qiniu
 
 @staff_member_required(login_url='index')
 def index(request):
@@ -77,3 +78,17 @@ def upload_file(request):
             fp.write(chunk)
     url = request.build_absolute_uri(settings.MEDIA_URL+name)
     return restful.result(data={'url':url})
+
+
+@require_GET
+def qntoken(request):
+    access_key = 'vWrrniJ33WvIqpsf84WA_TVSGh8t77J7lCePUkT0'
+    secret_key = 'qbVvAvxAvvfl9aN9W4Rxs2O6hXHAcwuLo8ezbfp1'
+    # bucket为七牛存储空间的名称
+    bucket = 'feng'
+    q = qiniu.Auth(access_key, secret_key)
+    token = q.upload_token(bucket)
+    url =request.build_absolute_uri()
+    return restful.result(data={'token':token,'url':url})
+
+

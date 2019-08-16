@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2142e1d0-1df0-4dda-aa10-f99420cc6d4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/cms/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/dist/js/write_news.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/js/write_news.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/js/news_category.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/news_category.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/js/xfzajax.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/xfzajax.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/js/news_category.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/news_category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/js/xfzajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/xfzajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/cms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/cms/news_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/news_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/write_news.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/write_news.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/write_news.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/write_news.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/templates/cms/write_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/write_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xfzdemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xfzdemo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xfzdemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xfzdemo/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,22 +140,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="15" />
-          <entry key="html" value="7153" />
-          <entry key="js" value="7335" />
-          <entry key="py" value="8794" />
+          <entry key="html" value="7226" />
+          <entry key="js" value="8347" />
+          <entry key="py" value="9007" />
           <entry key="py@xfzdemo" value="626" />
           <entry key="scss" value="7991" />
-          <entry key="txt" value="53" />
+          <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
           <entry key="CommandLine" value="169" />
-          <entry key="HTML" value="7153" />
-          <entry key="JavaScript" value="7335" />
-          <entry key="PLAIN_TEXT" value="510" />
-          <entry key="Python" value="8794" />
+          <entry key="HTML" value="7226" />
+          <entry key="JavaScript" value="8347" />
+          <entry key="PLAIN_TEXT" value="511" />
+          <entry key="Python" value="9007" />
           <entry key="SCSS" value="7991" />
         </counts>
       </usages-collector>
@@ -172,63 +163,64 @@
         <counts>
           <entry key="css" value="7" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="66" />
+          <entry key="html" value="68" />
           <entry key="ico" value="1" />
           <entry key="jpg" value="8" />
-          <entry key="js" value="50" />
+          <entry key="js" value="52" />
           <entry key="png" value="1" />
-          <entry key="py" value="165" />
+          <entry key="py" value="168" />
           <entry key="scss" value="54" />
-          <entry key="ts" value="5" />
+          <entry key="ts" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="66" />
+          <entry key="HTML" value="68" />
           <entry key="Image" value="10" />
-          <entry key="JavaScript" value="50" />
+          <entry key="JavaScript" value="52" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="165" />
+          <entry key="Python" value="168" />
           <entry key="SCSS" value="54" />
-          <entry key="TypeScript" value="5" />
+          <entry key="TypeScript" value="8" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+            <state relative-caret-position="235">
+              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1565166350617" expanded="true" signature="433:438" ph="..." />
-                <marker date="1565166350617" expanded="true" signature="506:511" ph="..." />
-                <marker date="1565166350617" expanded="true" signature="857:862" ph="..." />
-                <marker date="1565166350617" expanded="true" signature="1910:1915" ph="..." />
-                <marker date="1565166350617" expanded="true" signature="2133:2138" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="446:451" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="519:524" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="870:875" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="1923:1928" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="2146:2151" ph="..." />
+                <marker date="1565941549465" expanded="true" signature="2477:2817" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/wf_env/wf_p3env/Lib/site-packages/django/http/request.py">
+        <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="164" column="8" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+            <state relative-caret-position="350">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/wf_env/wf_p3env/Lib/ntpath.py">
+        <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="76" column="22" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="22" />
+            <state relative-caret-position="225">
+              <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -236,8 +228,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/restful.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="43" />
+            <state relative-caret-position="375">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <marker date="1561966408833" expanded="true" signature="81:86" ph="..." />
                 <marker date="1561966408833" expanded="true" signature="241:246" ph="..." />
@@ -252,58 +244,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/js/write_news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xfzdemo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="144" column="21" lean-forward="true" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+            <state relative-caret-position="466">
+              <caret line="144" selection-start-line="144" selection-end-line="144" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xfzdemo/urls.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/templates/cms/write_news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+            <state relative-caret-position="225">
+              <caret line="27" column="98" lean-forward="true" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
               <folding>
-                <element signature="e#632#668#0" expanded="true" />
+                <element signature="e#1299#1806#0#HTML" />
+                <element signature="e#1420#1775#0#HTML" />
+                <element signature="e#2089#2110#0#HTML" expanded="true" />
+                <element signature="e#2262#2280#0#HTML" expanded="true" />
+                <element signature="e#1831#2075#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/templates/cms/write_news.html">
+        <entry file="file://$PROJECT_DIR$/front/src/js/write_news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="37" column="102" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/js/xfzajax.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/js/message.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+            <state relative-caret-position="137">
+              <caret line="53" column="98" lean-forward="true" selection-start-line="53" selection-start-column="98" selection-end-line="53" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -324,7 +293,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>立即登录</find>
-      <find>favicon.ico</find>
       <find>thumbnail-group</find>
       <find>FormMixin</find>
       <find>图片验证码错误</find>
@@ -333,7 +301,11 @@
       <find>listenSignupEvent</find>
       <find>event.preventDefault()</find>
       <find>fastclick.js</find>
+      <find>favicon.ico</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -386,11 +358,11 @@
         <option value="$PROJECT_DIR$/front/templates/cms/base.html" />
         <option value="$PROJECT_DIR$/front/src/js/xfzajax.js" />
         <option value="$PROJECT_DIR$/front/src/js/news_category.js" />
-        <option value="$PROJECT_DIR$/apps/cms/urls.py" />
-        <option value="$PROJECT_DIR$/front/templates/cms/write_news.html" />
         <option value="$PROJECT_DIR$/xfzdemo/urls.py" />
         <option value="$PROJECT_DIR$/xfzdemo/settings.py" />
+        <option value="$PROJECT_DIR$/apps/cms/urls.py" />
         <option value="$PROJECT_DIR$/apps/cms/views.py" />
+        <option value="$PROJECT_DIR$/front/templates/cms/write_news.html" />
         <option value="$PROJECT_DIR$/front/src/js/write_news.js" />
       </list>
     </option>
@@ -414,7 +386,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -433,7 +405,38 @@
             <path>
               <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
               <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
-              <item name="xfzdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="cms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xfzdemo1" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xfzdemo1" type="b2602c69:ProjectViewProjectNode" />
@@ -449,7 +452,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="User&#9;null&#9;null&#10;favicon.ico&#9;FILE&#9;file://D:/wf_env/wf_p3env/Lib/site-packages/notebook/static/base/images/favicon-busy-1.ico&#10;news_list&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Crawl" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -692,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565093059741</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2019.8.7">
+      <created>1565169866994</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1565169866994</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -704,12 +714,12 @@
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1477398" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1477398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4983462" visible="true" weight="0.36967808" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4983462" visible="true" weight="0.25649014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38733125" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -717,8 +727,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49779493" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016538" side_tool="true" weight="0.3613707" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733475" weight="0.25337487" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50275636" side_tool="true" weight="0.25337487" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49724367" weight="0.25337487" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3281412" />
       <window_info anchor="bottom" id="manage.py@xfzdemo" order="13" sideWeight="0.49944875" weight="0.31152648" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -776,28 +786,10 @@
     <MESSAGE value="day 14" />
     <MESSAGE value="day 15（注册功能）" />
     <MESSAGE value="2019.8.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.8.6" />
+    <MESSAGE value="2019.8.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.8.7" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/front/templates/news/news_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-883">
-          <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/course/course_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/common/auth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1283">
@@ -816,13 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1208">
           <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -873,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="17064" column="12" selection-start-line="17064" selection-start-column="12" selection-end-line="17064" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1070,13 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/js/news_category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1094,14 +1065,38 @@
     <entry file="file://$PROJECT_DIR$/front/src/js/message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
-          <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/6907779/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="339" column="4" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xfzdemo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+          <folding>
+            <element signature="e#632#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/wf_env/wf_p3env/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="76" column="22" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/restful.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="43" />
+        <state relative-caret-position="375">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <marker date="1561966408833" expanded="true" signature="81:86" ph="..." />
             <marker date="1561966408833" expanded="true" signature="241:246" ph="..." />
@@ -1114,69 +1109,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xfzdemo/urls.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-          <folding>
-            <element signature="e#632#668#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="16403" column="13" selection-start-line="16403" selection-start-column="13" selection-end-line="16403" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/6907779/builtins.py">
+    <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="339" column="4" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/wf_env/wf_p3env/Lib/ntpath.py">
+    <entry file="file://D:/wf_env/wf_p3env/Lib/site-packages/django/conf/global_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="76" column="22" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xfzdemo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="144" column="21" lean-forward="true" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+        <state relative-caret-position="230">
+          <caret line="251" column="39" lean-forward="true" selection-start-line="251" selection-start-column="39" selection-end-line="251" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/wf_env/wf_p3env/Lib/site-packages/django/http/request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="164" column="8" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+        <state relative-caret-position="522">
+          <caret line="173" column="28" lean-forward="true" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/write_news.html">
+    <entry file="file://D:/wf_env/wf_p3env/Lib/site-packages/qiniu/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="37" column="102" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="102" />
+        <state relative-caret-position="405">
+          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/write_news.js">
+    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="350">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xfzdemo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+        <state relative-caret-position="235">
+          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1565166350617" expanded="true" signature="433:438" ph="..." />
-            <marker date="1565166350617" expanded="true" signature="506:511" ph="..." />
-            <marker date="1565166350617" expanded="true" signature="857:862" ph="..." />
-            <marker date="1565166350617" expanded="true" signature="1910:1915" ph="..." />
-            <marker date="1565166350617" expanded="true" signature="2133:2138" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="446:451" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="519:524" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="870:875" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="1923:1928" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="2146:2151" ph="..." />
+            <marker date="1565941549465" expanded="true" signature="2477:2817" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="489" lean-forward="true" selection-start-line="489" selection-end-line="489" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/js/write_news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="53" column="98" lean-forward="true" selection-start-line="53" selection-start-column="98" selection-end-line="53" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/cms/write_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="27" column="98" lean-forward="true" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
+          <folding>
+            <element signature="e#1299#1806#0#HTML" />
+            <element signature="e#1420#1775#0#HTML" />
+            <element signature="e#2089#2110#0#HTML" expanded="true" />
+            <element signature="e#2262#2280#0#HTML" expanded="true" />
+            <element signature="e#1831#2075#0#HTML" />
           </folding>
         </state>
       </provider>
