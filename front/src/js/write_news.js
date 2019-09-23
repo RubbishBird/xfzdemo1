@@ -31,7 +31,7 @@ UploadFile.prototype.listenUploadFileEvent = function(){
                     thumbnailInput.val(url);
                 }
             }
-        })
+        });
     });
 };
 
@@ -51,7 +51,7 @@ UploadFile.prototype.listenQiniuUploadFileEvent = function(){
                     var putExtra = {
                         fname:key,
                         params:{},
-                        mimeType:["image/png", "image/jpeg", "image/gif","image/bmp","image/jpg"],
+                        mimeType:["image/png", "image/jpeg", "image/gif","image/bmp","image/jpg","video/mp4"],
                     };
                     var config = {
                         useCdnDomain: true,
@@ -64,10 +64,6 @@ UploadFile.prototype.listenQiniuUploadFileEvent = function(){
                         'error':self.handleFileUploadError,
                         'complete':self.handleFileUploadComplete,
                     });
-
-                    // var url = result['data']['url'];
-                    // var thumbnailInput = $('#thunbnail-form');
-                    // thumbnailInput.val(url);
                 }
             }
         })
@@ -79,15 +75,17 @@ UploadFile.prototype.handleFileUploadProgress = function(response){
     var total = response.total;
     var percent = total.percent;
     var percentText = percent.toFixed(0) + '%';
-    var progressgroup = $('#process-group');
+    var progressgroup = UploadFile.progressgroup;
     progressgroup.show();
     var progressbar = $('.progress-bar');
-    progressbar.css({'width':percentText})
+    progressbar.css({'width':percentText});
     progressbar.text(percentText);
 };
 
 UploadFile.prototype.handleFileUploadError = function(error){
     console.log(error.message);
+    var progressgroup = $('#process-group');
+    progressgroup.hide();
 };
 
 UploadFile.prototype.handleFileUploadComplete = function(response){
@@ -98,6 +96,9 @@ UploadFile.prototype.handleFileUploadComplete = function(response){
     var url = domain + filename;
     var thumbnailInput = $('#thunbnail-form');
     thumbnailInput.val(url);
+    var progressbar = $('.progress-bar');
+    progressbar.css({'width':0});
+
 };
 
 
@@ -105,4 +106,5 @@ $(function () {
     var uploadfile = new UploadFile();
     uploadfile.run();
 
+    UploadFile.progressgroup = $('#process-group');
 });

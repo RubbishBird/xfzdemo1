@@ -3,7 +3,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.views.generic import View
 from django.views.decorators.http import require_POST,require_GET
 from utils import restful
-from apps.news.models import NewsCategory
+from apps.news.models import NewsCategory,NewsLink
 from apps.cms.forms import EditNewsCategoryForm
 import os
 from django.conf import settings
@@ -88,7 +88,7 @@ def qntoken(request):
     bucket = 'feng'
     q = qiniu.Auth(access_key, secret_key)
     token = q.upload_token(bucket)
-    url =request.build_absolute_uri()
-    return restful.result(data={'token':token,'url':url})
+    return restful.result(data={'token':token})
+
 
 
